@@ -1,0 +1,42 @@
+body{ 
+        background-color: #333;
+}
+.preloader {
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+}
+.preloader .lg {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #555;
+    border-top-color:transparent;
+    /*--HW1: cu citi px a iesit in afara?--
+    *A iesit cu 10px bottom si 10px left. Datorita bordurii date de 5px in urma careia boxa
+    sa primit de 210x210px. De ce sa deplasat doar in dreapta si in jos? Din motiv ca lg este copilul lui
+    preloader si asa cum in html toate elementele incep din coltul sting de sus, elementul lg sa impins din
+    peretii de sus si de dreapta a parintelui datorita marimii mai mare de cit a parintelui -*/
+
+    border-radius: 100px;
+    box-sizing: border-box;
+    animation: rot 5s infinite linear ;
+}
+.preloader .sm {
+    border: 5px solid #999;
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    border-right-color: transparent;
+    /*transform: translateX(15px) translateY(15px); /*HW2*/
+    margin: 15px; /*hw2*/
+    animation: rot2 2s infinite linear ;
+}
+
+@keyframes rot {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes rot2 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
